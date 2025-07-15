@@ -1,0 +1,46 @@
+{
+  "name": "surge-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tailwindcss/postcss": "^4.1.10",
+    "@tanstack/react-query": "^5.80.7",
+    "@tanstack/react-query-devtools": "^5.80.7",
+    "axios": "^1.10.0",
+    "canvasjs": "^1.8.3",
+    "canvasjs-react-charts": "^1.0.5",
+    "chart.js": "^4.4.9",
+    "dayjs": "^1.11.13",
+    "luxon": "^3.6.1",
+    "next": "15.3.2",
+    "postcss": "^8.5.5",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "reactflow": "^11.11.4",
+    "sass": "^1.89.0",
+    "tailwindcss": "^4.1.10",
+    "tinycolor": "^0.0.1",
+    "tinycolor2": "^1.6.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tanstack/eslint-plugin-query": "^5.78.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/tinycolor2": "^1.4.6",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "typescript": "^5"
+  }
+}

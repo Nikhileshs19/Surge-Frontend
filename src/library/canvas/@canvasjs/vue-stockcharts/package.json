@@ -1,0 +1,40 @@
+{
+  "name": "@canvasjs/vue-stockcharts",
+  "version": "1.0.0",
+  "description": "CanvasJS Vue StockCharts",
+  "keywords": [
+	"vue stockcharts",
+	"vue charting library",
+	"dataviz",
+	"canvasjs",
+	"vue.js stockcharts",
+	"vue financial chart",
+	"high performance stock chart",
+	"canvasjs stockcharts"
+  ],
+  "author": "fenopix",
+  "license": "MIT",
+  "homepage": "https://canvasjs.com/vue-charts/",
+  "type": "module",
+  "main": "./dist/vue-stockcharts.umd.cjs",
+  "module": "./dist/vue-stockcharts.js",
+  "exports": {
+	".": {
+	  "import": "./dist/vue-stockcharts.js",
+	  "require": "./dist/vue-stockcharts.umd.cjs"
+	}
+  },
+
+  "scripts": {
+	"dev": "vite",
+	"build": "vite build",
+	"preview": "vite preview"
+  },
+  "dependencies": {
+	"vue": "^3.2.47"
+  },
+  "devDependencies": {
+	"@vitejs/plugin-vue": "^4.0.0",
+	"vite": "^4.1.4"
+  }
+}

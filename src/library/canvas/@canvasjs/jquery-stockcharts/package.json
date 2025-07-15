@@ -1,0 +1,23 @@
+{
+	"name": "@canvasjs/jquery-stockcharts",
+	"version": "1.0.2",
+	"description": "CanvasJS jQuery StockCharts - Official",
+	"main": "jquery.canvasjs.stock.min.js",
+	"keywords": [
+		"jQuery",
+		"stockcharts",
+		"canvasjs",
+		"canvasjs jQuery stockcharts",
+		"jQuery stockcharts",
+		"jQuery financial chart",
+		"high performance stock chart",
+		"canvasjs stockcharts"
+	],
+	"author": "fenopix",
+	"license": "MIT",
+	"homepage": "https://canvasjs.com/jquery-charts/#stockcharts",
+	"dependencies": {
+		"jquery": ">=1.11.0",
+		"@canvasjs/stockcharts": "^1.7.5"
+	}
+}

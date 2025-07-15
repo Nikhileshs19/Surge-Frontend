@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>                    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>CanvasJS Angular StockChart</title>
+    <style type="text/css">
+      pre code {
+        font-family: monospace;
+      }
+      .logo {
+        text-align: center
+      }
+      body {
+        font-family: Helvetica, arial, sans-serif;
+        padding: 30px;
+        color: #333;
+        line-height: 1.6;
+      }
+      pre {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin: 0;
+        padding: 16px;
+        white-space: pre;
+        background: #f8f8f8;
+        display: block;
+      }
+      p {
+        margin-bottom: 8px;
+        font-weight: 400;
+        line-height: 1.6;
+        font-size: 14px;
+      }
+      p, code {
+        margin: 15px 0;
+      }
+
+      h5 {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        margin: 20px 0 10px;
+        padding: 0;
+        font-weight: bold;
+        cursor: text;
+        position: relative;
+      }
+
+      h2 {
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 4px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h1, h2 {
+        color: black;
+      }
+
+      a {
+        color: #0275d8;
+        outline: 0;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #00539b;
+      }  
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <a href="https://www.npmjs.com/~canvasjs">
+        <img src="https://canvasjs.com/wp-content/uploads/images/logo/canvasjs-logo-240x100.png" alt="CanvasJS"/>
+      </a>
+    </div>
+    <h1>
+      CanvasJS Angular StockCharts
+    </h1>
+    <p>
+      CanvasJS Angular StockChart Component for creating interactive stockchart for your web pages. Library supports a wide range of chart types including bar, line, area, pie, doughnut, etc.
+    </p>
+    <h2>
+      Installing CanvasJS Angular StockCharts
+    </h2>
+    <h5>
+      Download CanvasJS Angular StockCharts
+    </h5>
+    <p>
+      Download the commercial version of Angular StockChart Package from <a href="https://canvasjs.com/my-account/">My Account Page</a>. Copy '@canvasjs' folder into src (lib or assets) folder of your app.
+    </p>
+    <h5>
+      Update tsconfig.json to include CanvasJS Angular StockCharts path under compilerOptions
+    </h5>
+<pre><code>&quot;paths&quot;: {
+  &quot;@canvasjs/angular-stockcharts&quot;: [
+    &quot;./src/@canvasjs/angular-stockcharts&quot;
+  ],
+}
+</code></pre>
+    <h5>
+      Import StockChart Component &amp; register the module
+    </h5>
+    <p>
+      Import the StockChart module into your Angular application (app.module.ts) &amp; register it.
+    </p>
+<pre><code>import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+
+import { CanvasJSAngularStockChartsModule } from '@canvasjs/angular-stockcharts';
+
+@NgModule({
+  declarations: [
+	AppComponent
+  ],
+  imports: [
+	BrowserModule,
+	CanvasJSAngularStockChartsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+</code></pre>
+    <h5>
+      Set the stockchart-options &amp; create stockchart
+    </h5>
+    <p>
+      Set the stockchart-options in app.component.ts &amp; use  canvasjs-stockchart  selector in app.component.html to create stockchart.
+    </p>
+<pre><code>//app.component.ts
+import { NgModule } from '@angular/core';
+export class AppComponent {
+    stockChartOptions = {
+      title: {
+        text: &quot;CanvasJS Angular StockChart&quot;
+      },
+      charts: [{
+        data: [{
+          type: &quot;line&quot;,
+          dataPoints: [
+            { x: new Date(&quot;2018-01-01&quot;), y: 71 },
+            { x: new Date(&quot;2018-02-01&quot;), y: 55 },
+            { x: new Date(&quot;2018-03-01&quot;), y: 50 },
+            { x: new Date(&quot;2018-04-01&quot;), y: 65 },
+            { x: new Date(&quot;2018-05-01&quot;), y: 95 },
+            { x: new Date(&quot;2018-06-01&quot;), y: 68 },
+            { x: new Date(&quot;2018-07-01&quot;), y: 28 },
+            { x: new Date(&quot;2018-08-01&quot;), y: 34 },
+            { x: new Date(&quot;2018-09-01&quot;), y: 14 },
+            { x: new Date(&quot;2018-10-01&quot;), y: 71 },
+            { x: new Date(&quot;2018-11-01&quot;), y: 55 },
+            { x: new Date(&quot;2018-12-01&quot;), y: 50 },
+            { x: new Date(&quot;2019-01-01&quot;), y: 34 },
+            { x: new Date(&quot;2019-02-01&quot;), y: 50 },
+            { x: new Date(&quot;2019-03-01&quot;), y: 50 },
+            { x: new Date(&quot;2019-04-01&quot;), y: 95 },
+            { x: new Date(&quot;2019-05-01&quot;), y: 68 },
+            { x: new Date(&quot;2019-06-01&quot;), y: 28 },
+            { x: new Date(&quot;2019-07-01&quot;), y: 34 },
+            { x: new Date(&quot;2019-08-01&quot;), y: 65 },
+            { x: new Date(&quot;2019-09-01&quot;), y: 55 },
+            { x: new Date(&quot;2019-10-01&quot;), y: 71 },
+            { x: new Date(&quot;2019-11-01&quot;), y: 55 },
+            { x: new Date(&quot;2019-12-01&quot;), y: 50 }
+          ]
+        }]
+      }],
+      navigator: {
+        slider: {
+          minimum: new Date(&quot;2018-07-01&quot;),
+          maximum: new Date(&quot;2019-06-30&quot;)
+        }
+      }
+    };
+}
+    
+//app.component.html
+&lt;div&gt;
+   &lt;canvasjs-stockchart [options]=&quot;stockChartOptions&quot;&gt;&lt;/canvasjs-stockchart&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </body>
+</html>
